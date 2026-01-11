@@ -186,7 +186,7 @@ python -m streamlit run app.py
 
 ## 致谢
 
-- 感谢所有贡献者
+- 感谢自己开始尝试使用vibe coding快速实现并且迭代了这个想法
 - 感谢Streamlit、LangChain和Neo4j等开源项目的支持
 
 ## 声明
