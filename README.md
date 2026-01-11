@@ -37,8 +37,6 @@ Knowledge-Graph-Builder/
 │   └── ui_components.py      # 自定义UI组件
 ├── config/                   # 配置文件目录
 │   └── app_config.py         # 应用配置
-├── data/                     # 示例数据
-│   └── test.docx
 ├── styles/                   # 样式文件目录
 │   ├── main.css              # 自定义CSS
 │   └── main.js               # 自定义JavaScript
@@ -47,7 +45,6 @@ Knowledge-Graph-Builder/
 │   ├── doc_loader.py         # 文档加载
 │   ├── graph_db.py           # 图数据库操作
 │   └── llm_extractor.py      # LLM抽取
-├── config.yaml               # 示例本体配置
 ├── requirements.txt          # 依赖列表
 └── README.md                 # 项目说明
 ```
