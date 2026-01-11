@@ -1,0 +1,473 @@
+/* 现代化蓝色主题 */
+:root {
+    --primary-color: #5B8FF9;
+    --primary-dark: #366FE7;
+    --secondary-color: #36CBCB;
+    --accent-color: #F9A826;
+    --background-color: #F5F7FA;
+    --card-background: #FFFFFF;
+    --text-color: #333333;
+    --text-light: #666666;
+    --border-color: #E5E8EE;
+    --success-color: #52C41A;
+    --error-color: #FF4D4F;
+    --warning-color: #FAAD14;
+    --entity-color: #5B8FF9;
+    --relation-color: #36CBCB;
+    --property-color: #6E85B7;
+}
+
+/* 加载动画 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(91, 143, 249, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 1rem;
+}
+
+.loading-text {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.loading-subtext {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* 渐进式加载指示器 */
+.progressive-loader {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(91, 143, 249, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.progressive-loader-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    width: 0%;
+    animation: loadingBar 2s ease-out forwards;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@keyframes loadingBar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* 三元组卡片动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.triple-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-color);
+    animation: fadeInUp 0.3s ease-out forwards;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.triple-card:hover {
+    box-shadow: 0 2px 10px rgba(91, 143, 249, 0.15);
+    transform: translateY(-1px);
+}
+
+.triple-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.entity {
+    background-color: rgba(91, 143, 249, 0.1);
+    border: 1px solid var(--entity-color);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    flex: 1;
+    min-width: 120px;
+}
+
+.entity-name {
+    font-weight: 600;
+    color: var(--entity-color);
+    margin-bottom: 0.15rem;
+}
+
+.entity-type {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+}
+
+.entity-properties {
+    font-size: 0.7rem;
+    color: var(--property-color);
+    line-height: 1.3;
+}
+
+.relation {
+    background-color: rgba(54, 203, 203, 0.1);
+    border: 1px solid var(--relation-color);
+    border-radius: 16px;
+    padding: 0.35rem 0.75rem;
+    font-weight: 600;
+    color: var(--relation-color);
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* 进度条容器动画 */
+.progress-container {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* 文本块预览容器动画 */
+.chunk-container {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* 全局样式 */
+body {
+    background-color: var(--background-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 主容器 */
+.main {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem;
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* 页面标题 */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.page-title img {
+    width: 40px;
+    height: 40px;
+}
+
+.page-subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* 步骤容器 */
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 步骤导航 */
+.step-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.step-nav::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 0;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.step-number {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.step-number.completed {
+    background-color: var(--success-color);
+}
+
+.step-number.active {
+    background-color: var(--primary-dark);
+}
+
+.step-title {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.step-description {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+
+/* 卡片样式 */
+.card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+}
+
+/* 按钮样式 */
+.stButton > button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(91, 143, 249, 0.3);
+}
+
+.stButton > button:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(91, 143, 249, 0.4);
+    transform: translateY(-1px);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* 主要按钮 - 已简化，使用Streamlit原生按钮 */
+
+
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(250, 173, 20, 0.6);
+    }
+    100% {
+        box-shadow: 0 2px 8px rgba(250, 173, 20, 0.3);
+    }
+}
+
+/* 缓存状态卡片样式 - 已删除，界面简化 */
+
+/* 输入框禁用回车提交 */
+.stTextInput > div > input {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: all 0.2s ease;
+    pointer-events: auto !important;
+}
+
+.stTextInput > div > input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(91, 143, 249, 0.1);
+}
+
+/* 文件上传器样式 */
+.stFileUploader > div > div {
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 3rem;
+    background-color: #FAFBFD;
+    transition: all 0.2s ease;
+}
+
+.stFileUploader > div > div:hover {
+    border-color: var(--primary-color);
+    background-color: #F0F4FF;
+}
+
+/* 缓存管理卡片 - 已删除，界面简化 */
+
+/* 完整终端容器 */
+.terminal-container {
+    background-color: #2D3748;
+    color: #E2E8F0;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid #4A5568;
+    margin: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.terminal-header {
+    background-color: #1A202C;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #4A5568;
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+}
+
+.terminal {
+    background-color: #2D3748;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+
+.terminal-dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.terminal-dot.close {
+    background-color: #E53E3E;
+}
+
+.terminal-dot.minimize {
+    background-color: #DD6B20;
+}
+
+.terminal-dot.maximize {
+    background-color: #38A169;
+}
+
+.terminal-title {
+    color: #A0AEC0;
+    font-size: 0.875rem;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+/* 终端文本颜色 */
+.terminal .command {
+    color: #68D391;
+}
+
+.terminal .path {
+    color: #63B3ED;
+}
+
+.terminal .result {
+    color: #E2E8F0;
+}
+
+.terminal .info {
+    color: #9F7AEA;
+}
+
+.terminal .success {
+    color: #48BB78;
+}
+
+.terminal .sentence {
+    color: #ED8936;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.terminal .sentence::before {
+    content: '>';
+    color: #68D391;
+    position: absolute;
+    left: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main {
+        padding: 1rem;
+    }
+    
+    .step-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-nav::before {
+        display: none;
+    }
+}
