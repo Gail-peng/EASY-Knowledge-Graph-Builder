@@ -1,8 +1,8 @@
 # Knowledge Graph Builder
 
-[![GitHub stars](https://img.shields.io/github/stars/Gail-peng/EASY-Knowledge-Graph-Builder)](https://github.com/Gail-peng/EASY-Knowledge-Graph-Builder/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Gail-peng/EASY-Knowledge-Graph-Builder)](https://github.com/Gail-peng/EASY-Knowledge-Graph-Builder/network)
-[![GitHub issues](https://img.shields.io/github/issues/Gail-peng/EASY-Knowledge-Graph-Builder)](https://github.com/Gail-peng/EASY-Knowledge-Graph-Builder/issues)
+[![GitHub stars](https://img.shields.io/github/stars/happy-momo/EASY-Knowledge-Graph-Builder)](https://github.com/happy-momo/EASY-Knowledge-Graph-Builder/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/happy-momo/EASY-Knowledge-Graph-Builder)](https://github.com/happy-momo/EASY-Knowledge-Graph-Builder/network)
+[![GitHub issues](https://img.shields.io/github/issues/happy-momo/EASY-Knowledge-Graph-Builder)](https://github.com/happy-momo/EASY-Knowledge-Graph-Builder/issues)
 
 ## 项目简介
 
@@ -160,7 +160,7 @@ relationships:
 
 ```bash
 # 克隆项目
-git clone https://github.com/Gail-peng/EASY-Knowledge-Graph-Builder.git
+git clone https://github.com/happy-momo/EASY-Knowledge-Graph-Builder.git
 cd Knowledge-Graph-Builder
 
 # 安装依赖
@@ -197,7 +197,7 @@ python -m streamlit run app.py
 
 ```
 基于 Knowledge Graph Builder 项目开发
-原项目地址：https://github.com/Gail-peng/EASY-Knowledge-Graph-Builder
+原项目地址：https://github.com/happy-momo/EASY-Knowledge-Graph-Builder
 ```
 
 ---
